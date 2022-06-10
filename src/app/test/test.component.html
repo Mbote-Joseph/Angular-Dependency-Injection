@@ -1,0 +1,17 @@
+<h1>{{ message }}</h1>
+<app-test-details [test]="selectedTest"></app-test-details>
+<div *ngFor="let test of tests" class="container" (click)="onSelect(test)">
+  <div>
+    <div class="card" style="margin-top: 20px">
+      <h2 class="card-header" class="alert alert-success" role="alert">
+        {{ test.name }}
+      </h2>
+
+      <div class="card-body">
+        <h5 class="card-title">Description</h5>
+        <p class="alert alert-primary" role="alert">{{ test.description }}</p>
+        <a href="#" class="btn btn-primary">Course ID: {{ test.id }}</a>
+      </div>
+    </div>
+  </div>
+</div>
